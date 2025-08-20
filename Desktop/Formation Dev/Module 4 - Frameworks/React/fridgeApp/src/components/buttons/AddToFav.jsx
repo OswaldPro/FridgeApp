@@ -6,7 +6,7 @@ export default function AddToFavouriteButton({ recipe }) {
 
   return (
     <button
-      className={isFav ? "enlever" : "ajouter"}
+      className={isFav ? "enlever fav-btn" : "ajouter fav-btn"}
       onClick={() =>
         isFav ? removeFromFavourite(recipe) : addToFavourite(recipe)
       }

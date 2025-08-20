@@ -1,7 +1,8 @@
 import { useIngredient } from "../context/IngredientCtxt";
 import { NavLink, useNavigate } from "react-router";
 import { useParams } from "react-router";
-import { PiArrowLeft } from "react-icons/pi";
+import { PiArrowLeft, PiClockBold, PiUserBold } from "react-icons/pi";
+import { FiLoader } from "react-icons/fi";
 import AddToFavouriteButton from "../buttons/AddToFav";
 import Navbar from "../nav/Navbar";
 
@@ -36,9 +37,27 @@ export default function RecipeDetails() {
         </button>
         {recipe.nom}
       </h2>
-      <img className="recipe-img" src={recipe.image} alt={recipe.nom} />
-      <AddToFavouriteButton recipe={recipe}></AddToFavouriteButton>
-      <NavLink to="/myrecipe">My recipe</NavLink>
+      <div className="top-details">
+        <img className="recipe-img" src={recipe.image} alt={recipe.nom} />
+        <div className="prep-details">
+          <span className="clock">
+            <PiClockBold size={"24px"} />
+            {recipe.temps_preparation}
+          </span>
+
+          <span className="person">
+            <PiUserBold size={"24px"} />
+            {recipe.nombre_personnes}
+          </span>
+
+          <span className="loader">
+            <FiLoader size={"24px"} />
+            {recipe.temps_cuisson}
+          </span>
+
+          <AddToFavouriteButton recipe={recipe}></AddToFavouriteButton>
+        </div>
+      </div>
 
       <h3>Ingrédients</h3>
       <ul>

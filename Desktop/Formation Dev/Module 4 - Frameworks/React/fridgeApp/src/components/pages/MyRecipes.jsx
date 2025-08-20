@@ -9,7 +9,7 @@ export default function myRecipes() {
   const goBack = () => {
     navigate(-1);
   };
-  const { favourites, setFavourite } = useFavourite();
+  const { favourites, setFavourites } = useFavourite();
 
   return (
     <div>

@@ -1,7 +1,10 @@
-import { NavLink, useNavigate } from "react-router";
+import { NavLink } from "react-router";
 import { PiHouse, PiBookBookmark, PiListBullets } from "react-icons/pi";
+import { useFavourite } from "../context/FavouriteRCtxt";
 
 export default function Navbar() {
+  const { favouritesCount } = useFavourite();
+
   return (
     <div className="navbar">
       <div className="home">
@@ -32,6 +35,9 @@ export default function Navbar() {
           })}
         >
           <PiBookBookmark size={"24px"} />
+          {favouritesCount > 0 && (
+            <span className="badge">{favouritesCount}</span>
+          )}
         </NavLink>
       </div>
     </div>

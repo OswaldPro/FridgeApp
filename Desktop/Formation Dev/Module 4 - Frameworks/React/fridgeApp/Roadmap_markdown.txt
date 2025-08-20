@@ -1,0 +1,16 @@
+## ✅ En cours / Fait
+- [x] Recherche de recettes par ingrédients saisis
+- [x] Ajout / Retrait de recettes aux favoris
+- [x] Persistance des favoris via `localStorage`
+- [x] Page "Mes Recettes" pour consulter les favoris
+
+## 🛠️ Prochaines étapes
+- [ ] Afficher le nombre d’ingrédients manquants par recette
+- [ ] Afficher le temps total (prépa + cuisson) dans les résultats
+- [ ] Amélioration de l’UI/UX (cards, navigation, responsive)
+
+## 🚀 À venir (features avancées)
+- [ ] Ajout de ses propres recettes (formulaire + sauvegarde)
+- [ ] Export de la liste de courses (PDF / mail / WhatsApp)
+- [ ] Création de compte utilisateur (authentification)
+- [ ] Partage de recettes avec la communauté

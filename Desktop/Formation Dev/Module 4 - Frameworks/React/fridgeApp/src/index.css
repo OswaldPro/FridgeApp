@@ -67,6 +67,27 @@ h2 {
   align-items: center;
   position:fixed;
   bottom: 0;
+  border-top: #000 solid 6px;
+
+  .fav {
+    display: inline-block;
+    position: relative;
+
+  .badge {
+  aspect-ratio: 1/1;
+  position: absolute;
+  bottom: -6px;  
+  right: -8px;
+  background: #FF5900;
+  color: white;
+  border: #000 solid 1px;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 16px;
+  font-family: 'Arial';
+  font-weight: 600;
+    }
+  }
 }
 
 /* Components: Btn */
@@ -234,4 +255,42 @@ h2 {
   width: 100vw;
   height: 88vh;
 }
+
+/* Recipe details page  */
+
+.recipe-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .top-details {
+    display: flex;
+    justify-content: start;
+    gap: 30px;
+
+    .prep-details {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      justify-content: flex-start;
+
+      .fav-btn {
+        align-self: flex-end;
+        position: relative;
+        bottom: 0;
+      }
+
+      span {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        gap: 10px;   
+        font-size: 14px;   
+        font-family: 'Jura';  
+      }
+    }
+  }
+}
+
 
